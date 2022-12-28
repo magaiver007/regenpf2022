@@ -1,0 +1,43 @@
+user:
+id
+email
+pass
+subscription plan 
+credit info
+region
+
+max 4 profiles:
+profile
+username
+recently seen
+recomendations 
+
+depending on subscription plan no of profiles & different access to content 
+
+
+
+credit info:
+card no
+exp. date 
+cvv
+
+movies parent class:
+id
+age restriction
+user rating
+title 
+misc attributes
+inherits attributes from movie class
+no of episodes
+duration of airing
+extends to movies & series 
+
+
+movies:
+inherits from movies parent
+
+series:
+
+
+episodes object of series:
+inherits from movies parent
