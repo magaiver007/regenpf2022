@@ -46,5 +46,7 @@ Progress: Loading…
 Created ClassDiag_ver0.1 by Nikos B.
 2nd commit:
 upload project files by Stefanos O.
+3nd commit:
+First model attempt by Stefanos O.
 
 
