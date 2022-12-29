@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class Actor extends BaseModel {
+public class CrewMember extends BaseModel {
     private String firstname;
     private String lastname;
     private int age;

@@ -1,5 +1,4 @@
 package com.movies.acmeflix.model.MovieModel;
-
 import lombok.Data;
 
 @Data

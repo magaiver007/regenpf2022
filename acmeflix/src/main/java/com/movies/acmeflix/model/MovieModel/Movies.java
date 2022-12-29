@@ -13,6 +13,6 @@ public class Movies extends BaseModel {
     private int year;
     private double duration;
     private double rating;
-    private List<Actor> actors;
+    private List<CrewMember> crewMembers;
 
 }

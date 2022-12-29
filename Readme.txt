@@ -48,5 +48,7 @@ Created ClassDiag_ver0.1 by Nikos B.
 upload project files by Stefanos O.
 3nd commit:
 First model attempt by Stefanos O.
+4th commit:
+minor model changes by Stefanos O.
 
 
