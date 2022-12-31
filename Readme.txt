@@ -50,5 +50,8 @@ upload project files by Stefanos O.
 First model attempt by Stefanos O.
 4th commit:
 minor model changes by Stefanos O.
+5th commit:
+refactored moviemodel package
+implemented initial versions of Content, Movie, Episode classes by Dimosthenis K.
 
 
