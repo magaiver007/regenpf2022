@@ -1,4 +1,4 @@
-package com.movies.acmeflix.model.MovieModel;
+package com.movies.acmeflix.model.moviemodel;
 
 import com.movies.acmeflix.model.BaseModel;
 import lombok.Data;
@@ -10,5 +10,5 @@ public class CrewMember extends BaseModel {
     private String firstname;
     private String lastname;
     private int age;
-    private List<Movies> moviesList ;
+    private List<Movie> movieList;
 }

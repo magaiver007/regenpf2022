@@ -1,4 +1,4 @@
-package com.movies.acmeflix.model.MovieModel;
+package com.movies.acmeflix.model.moviemodel;
 
 public enum Category {
     ACTION,
