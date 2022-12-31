@@ -1,6 +1,6 @@
 package com.movies.acmeflix.model.moviemodel;
 
-public enum Category {
+public enum MovieCategories {
     ACTION,
     ADVENTURE,
     DRAMA,
