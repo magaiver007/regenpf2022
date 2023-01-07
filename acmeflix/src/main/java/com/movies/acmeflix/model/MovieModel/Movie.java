@@ -28,6 +28,4 @@ public class Movie extends Content {
     @ManyToMany(mappedBy = "movies", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<CrewMember> crewMember=new HashSet<>();
 
-
-
 }

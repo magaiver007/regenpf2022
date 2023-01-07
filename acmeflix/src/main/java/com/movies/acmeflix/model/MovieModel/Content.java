@@ -35,9 +35,9 @@ public class Content extends BaseModel {
     private double duration;
     @Min(1)
     @Max(10)
-    private double avg_rating;
+    private double avgRating;
 
-    private int total_views;
+    private int totalViews;
 
     @Min(1900)
     @Max(2023)
