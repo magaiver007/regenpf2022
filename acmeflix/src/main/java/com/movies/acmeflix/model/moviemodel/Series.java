@@ -14,5 +14,4 @@ public class Series {
     private int seriesStartYear;
     private int seriesEndYear;
     private double seriesRating;        // cumulative rating of each episode divided by seriesTotalEpisodes?
-    private List<Episode> seriesEpisodes;
 }
