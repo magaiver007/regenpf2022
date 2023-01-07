@@ -52,5 +52,7 @@ minor model changes by Stefanos O.
 5th commit:
 refactored moviemodel package
 implemented initial versions of Content, Movie, Episode classes by Dimosthenis K.
+6th commit:
+First repository attempt by Zoi K.
 
 
