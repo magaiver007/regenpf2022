@@ -37,8 +37,7 @@ TEAM MEMBERS:
 1) Dimosthenis Karampinas
 2) Stefanos Ountrakis
 3) Nikos Bousis
-4) Theofanis Karamitsos
-5) Zoi Ksinidou
+4) Zoi Ksinidou
 
 Progress: Loading…
 
