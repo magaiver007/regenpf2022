@@ -1,4 +1,4 @@
-package com.movies.acmeflix.model;
+package com.movies.acmeflix.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

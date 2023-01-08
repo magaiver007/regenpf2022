@@ -1,6 +1,6 @@
 package com.movies.acmeflix.model.MovieModel;
 
-import com.movies.acmeflix.model.BaseModel;
+import com.movies.acmeflix.base.BaseModel;
 import com.movies.acmeflix.model.MovieModel.enumeration.Category;
 import lombok.*;
 import lombok.experimental.SuperBuilder;

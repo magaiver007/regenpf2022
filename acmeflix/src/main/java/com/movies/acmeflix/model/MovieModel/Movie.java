@@ -1,6 +1,4 @@
 package com.movies.acmeflix.model.MovieModel;
-import com.movies.acmeflix.model.Ratings;
-import com.movies.acmeflix.model.Views;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 

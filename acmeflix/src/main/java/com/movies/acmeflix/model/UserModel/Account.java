@@ -1,6 +1,6 @@
 package com.movies.acmeflix.model.UserModel;
 
-import com.movies.acmeflix.model.BaseModel;
+import com.movies.acmeflix.base.BaseModel;
 import com.movies.acmeflix.model.UserModel.enumeration.PaymentMethod;
 import com.movies.acmeflix.model.UserModel.enumeration.SubscriptionPlan;
 import lombok.Data;
