@@ -41,5 +41,5 @@ public class Content extends BaseModel {
 
     @Min(1900)
     @Max(2023)
-    private int year_Of_Release;
+    private int yearOfRelease;
 }
