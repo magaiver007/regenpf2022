@@ -1,13 +1,13 @@
 package com.movies.acmeflix.model.MovieModel.repository;
 
-import com.movies.acmeflix.model.MovieModel.Serie;
+import com.movies.acmeflix.model.MovieModel.Series;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface SerieRepository extends JpaRepository<Serie, Long> {
+public interface SerieRepository extends JpaRepository<Series, Long> {
 
-    List<Serie> findTopByTotalViews(int totalViews);
+    List<Series> findTopByTotalViews(int totalViews);
 
-    List<Serie> findTopByAvgRating(double avgRating);
+    List<Series> findTopByAvgRating(double avgRating);
 }

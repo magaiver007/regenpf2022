@@ -1,7 +1,7 @@
 package com.movies.acmeflix.model;
 
 import com.movies.acmeflix.model.MovieModel.Movie;
-import com.movies.acmeflix.model.MovieModel.Serie;
+import com.movies.acmeflix.model.MovieModel.Series;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -26,7 +26,7 @@ public class Ratings extends BaseModel {
     private Movie movie;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    private Serie serie;
+    private Series series;
 
     @Min(1)
     @Max(10)

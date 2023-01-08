@@ -35,7 +35,7 @@ public class CrewMember extends BaseModel {
 
     @ManyToMany
     @JoinTable(name = "content_crew_members")
-    private Set<Serie> series=new HashSet<>();
+    private Set<Series> series=new HashSet<>();
 
     @ManyToMany
     @JoinTable(name = "content_crew_members")

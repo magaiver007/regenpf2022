@@ -21,7 +21,7 @@ import java.util.Set;
 @Table(name = "SERIES")
 @SequenceGenerator(name = "idGenerator", sequenceName = "SERIES_SEQ", initialValue = 1, allocationSize = 1)
 
-public class Serie extends Content {
+public class Series extends Content {
     @NotNull(message = "Series title can't be null")
     @Column(length = 20, nullable = false)
     private String seriesTitle;
