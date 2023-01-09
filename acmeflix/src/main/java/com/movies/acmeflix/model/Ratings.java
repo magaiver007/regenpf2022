@@ -31,4 +31,7 @@ public class Ratings extends BaseModel {
     @Max(10)
     private int rating;
 
+    @ManyToOne (fetch = FetchType.LAZY,optional = false)
+    private Profile profile;
+
 }

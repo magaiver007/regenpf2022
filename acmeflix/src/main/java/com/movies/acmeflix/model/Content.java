@@ -31,7 +31,7 @@ public class Content extends BaseModel {
 
     private String description;
 
-    @Column(precision = 2,scale = 1)
+    //PER MINUTE
     private BigDecimal duration;
 
     @Min(1900)

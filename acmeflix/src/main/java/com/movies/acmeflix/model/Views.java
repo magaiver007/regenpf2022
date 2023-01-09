@@ -25,6 +25,10 @@ public class Views extends BaseModel {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Series series;
+
+    //PER MINUTE
     private BigDecimal duration;
+    @ManyToOne (fetch = FetchType.LAZY,optional = false)
+    private Profile profile;
 
 }
