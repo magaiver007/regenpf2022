@@ -1,7 +1,7 @@
-package com.movies.acmeflix.model.MovieModel;
+package com.movies.acmeflix.model;
 
 import com.movies.acmeflix.base.BaseModel;
-import com.movies.acmeflix.model.MovieModel.enumeration.Category;
+import com.movies.acmeflix.model.enumeration.Category;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -10,7 +10,6 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
 @Data
 @SuperBuilder

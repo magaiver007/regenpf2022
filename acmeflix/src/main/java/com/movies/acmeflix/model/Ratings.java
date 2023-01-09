@@ -1,4 +1,4 @@
-package com.movies.acmeflix.model.MovieModel;
+package com.movies.acmeflix.model;
 
 import com.movies.acmeflix.base.BaseModel;
 import lombok.*;
@@ -7,7 +7,6 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import java.math.BigDecimal;
 
 
 @Data

@@ -1,7 +1,6 @@
 package com.movies.acmeflix.repository;
 
-import com.movies.acmeflix.model.UserModel.Account;
-import com.movies.acmeflix.model.UserModel.Profile;
+import com.movies.acmeflix.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AccountRepository extends JpaRepository<Account, Long> {

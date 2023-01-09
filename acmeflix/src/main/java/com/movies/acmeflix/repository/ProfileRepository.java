@@ -1,7 +1,7 @@
 package com.movies.acmeflix.repository;
 
-import com.movies.acmeflix.model.UserModel.Account;
-import com.movies.acmeflix.model.UserModel.Profile;
+import com.movies.acmeflix.model.Account;
+import com.movies.acmeflix.model.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

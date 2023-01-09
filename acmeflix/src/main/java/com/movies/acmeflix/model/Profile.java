@@ -1,6 +1,7 @@
-package com.movies.acmeflix.model.UserModel;
+package com.movies.acmeflix.model;
 
 import com.movies.acmeflix.base.BaseModel;
+import com.movies.acmeflix.model.Account;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 

@@ -1,8 +1,8 @@
-package com.movies.acmeflix.model.UserModel;
+package com.movies.acmeflix.model;
 
 import com.movies.acmeflix.base.BaseModel;
-import com.movies.acmeflix.model.UserModel.enumeration.PaymentMethod;
-import com.movies.acmeflix.model.UserModel.enumeration.SubscriptionPlan;
+import com.movies.acmeflix.model.enumeration.PaymentMethod;
+import com.movies.acmeflix.model.enumeration.SubscriptionPlan;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.movies.acmeflix.model.UserModel.enumeration;
+package com.movies.acmeflix.model.enumeration;
 
 public enum SubscriptionPlan {
     STARTER(5.99),BASIC(7.99),ADVANCED(9.99);

@@ -1,10 +1,9 @@
-package com.movies.acmeflix.model.MovieModel;
+package com.movies.acmeflix.model;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
