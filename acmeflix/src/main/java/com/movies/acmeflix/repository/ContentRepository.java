@@ -1,4 +1,4 @@
-package com.movies.acmeflix.model.MovieModel.repository;
+package com.movies.acmeflix.repository;
 
 import com.movies.acmeflix.model.MovieModel.Content;
 import org.springframework.data.jpa.repository.JpaRepository;

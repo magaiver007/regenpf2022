@@ -3,7 +3,6 @@ package com.movies.acmeflix.model.MovieModel;
 import com.movies.acmeflix.base.BaseModel;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -20,7 +19,6 @@ import java.util.Set;
 @Entity
 @Table(name="CREW_MEMBERS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "CREW_MEMBERS_SEQ", initialValue = 1, allocationSize = 1)
-
 
 public class CrewMember extends BaseModel {
     @NotNull(message = "Crew member's firstname cannot be null")

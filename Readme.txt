@@ -54,5 +54,7 @@ refactored moviemodel package
 implemented initial versions of Content, Movie, Episode classes by Dimosthenis K.
 6th commit:
 First repository attempt by Zoi K.
+7th commit:
+upload import.sql for dummies sql examples, querries.txt in order to insert querries that helps us with the project.
 
 

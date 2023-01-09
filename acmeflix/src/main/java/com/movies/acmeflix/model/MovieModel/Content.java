@@ -9,6 +9,8 @@ import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 @Data
 @SuperBuilder
@@ -20,7 +22,7 @@ import javax.validation.constraints.NotNull;
 
 public class Content extends BaseModel {
     @NotNull(message = "Movie's title can't be null")
-    @Column(length = 20, nullable = false)
+    @Column(length = 50, nullable = false)
     private String title;
 
     @NotNull(message = "Movie's category can't be null")
@@ -28,16 +30,10 @@ public class Content extends BaseModel {
     @Column(length = 15, nullable = false)
     private Category category;
 
-    @Column(length = 50)
     private String description;
 
-    @Column(precision = 3,scale = 2)
-    private double duration;
-    @Min(1)
-    @Max(10)
-    private double avgRating;
-
-    private int totalViews;
+    @Column(precision = 2,scale = 1)
+    private BigDecimal duration;
 
     @Min(1900)
     @Max(2023)

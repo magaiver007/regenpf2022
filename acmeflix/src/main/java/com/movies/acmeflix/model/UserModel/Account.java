@@ -20,7 +20,7 @@ import java.util.Set;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "ACCOUNTS",indexes = {@Index(columnList = "email")})
+@Table(name = "ACCOUNTS", indexes = {@Index(columnList = "email")})
 @SequenceGenerator(name = "idGenerator", sequenceName = "ACCOUNT_SEQ", initialValue = 1, allocationSize = 1)
 
 public class Account extends BaseModel {

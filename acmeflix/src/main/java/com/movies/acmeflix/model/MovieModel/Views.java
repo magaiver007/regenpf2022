@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Data
 @SuperBuilder
@@ -19,11 +20,11 @@ import javax.persistence.*;
 public class Views extends BaseModel {
 
     //One view to many movie
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Movie movie;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Series series;
-    private double duration;
+    private BigDecimal duration;
 
 }

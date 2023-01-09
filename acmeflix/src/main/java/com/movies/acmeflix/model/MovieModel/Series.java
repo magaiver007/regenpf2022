@@ -20,27 +20,17 @@ import java.util.Set;
 @SequenceGenerator(name = "idGenerator", sequenceName = "SERIES_SEQ", initialValue = 1, allocationSize = 1)
 
 public class Series extends Content {
-    @NotNull(message = "Series title can't be null")
-    @Column(length = 20, nullable = false)
-    private String seriesTitle;
-
-    @Column(length = 50)
-    private String seriesDescription;
-
-    @Min(2)
+      @Min(2)
     private int number_of_episodes;
     @Min(1)
     private int seasons;
 
-    @Column(length = 10)
-    private String fromTo;
-
     //Could be year or --(still continues)
     private String yearOfEnding;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "serie",cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "series",cascade = CascadeType.ALL,orphanRemoval = true)
     Set<Ratings> ratings = new HashSet<>();
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "serie",cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "series",cascade = CascadeType.ALL,orphanRemoval = true)
     Set<Views> views = new HashSet<>();
 
     @ManyToMany(mappedBy = "series", cascade = {CascadeType.PERSIST, CascadeType.MERGE})

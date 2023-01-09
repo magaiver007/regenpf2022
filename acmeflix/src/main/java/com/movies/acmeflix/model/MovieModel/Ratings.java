@@ -7,6 +7,7 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import java.math.BigDecimal;
 
 
 @Data
@@ -21,15 +22,14 @@ import javax.validation.constraints.Min;
 public class Ratings extends BaseModel {
 
     //Many ratings to one movie.
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Movie movie;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Series series;
 
     @Min(1)
     @Max(10)
-    @Column(precision = 2,scale=1)
-    private double rating;
+    private int rating;
 
 }

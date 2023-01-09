@@ -1,4 +1,4 @@
-package com.movies.acmeflix.model.UserModel.repository;
+package com.movies.acmeflix.repository;
 
 import com.movies.acmeflix.model.UserModel.Account;
 import com.movies.acmeflix.model.UserModel.Profile;
