@@ -34,12 +34,10 @@ public class Account extends BaseModel {
     @Enumerated(EnumType.STRING)
     @Column(length = 8, nullable = false)
     private SubscriptionPlan subscriptionPlan;
-
     @NotNull(message = "Account's Payment Method can't be null")
     @Enumerated(EnumType.STRING)
     @Column(length = 12, nullable = false)
     private PaymentMethod paymentMethod;
-
     @OneToMany (fetch=FetchType.LAZY,mappedBy = "account",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<Profile> profiles =  new HashSet<>();
 }

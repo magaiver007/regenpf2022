@@ -55,6 +55,7 @@ implemented initial versions of Content, Movie, Episode classes by Dimosthenis K
 6th commit:
 First repository attempt by Zoi K.
 7th commit:
-upload import.sql for dummies sql examples, querries.txt in order to insert querries that helps us with the project.
-
+upload import.sql for dummies sql examples, queries.txt in order to insert queries that helps us with the project.
+8th commit:
+added episodes and seasons,updated queries and import.sql
 

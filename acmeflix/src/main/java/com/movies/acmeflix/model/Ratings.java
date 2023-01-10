@@ -15,6 +15,7 @@ import javax.validation.constraints.Min;
 @AllArgsConstructor
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+
 @Entity
 @Table(name = "RATINGS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "RATING_SEQ", initialValue = 1, allocationSize = 1)
@@ -25,7 +26,7 @@ public class Ratings extends BaseModel {
     private Movie movie;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Series series;
+    private Episode episode;
 
     @Min(1)
     @Max(10)

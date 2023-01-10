@@ -19,12 +19,11 @@ import java.math.BigDecimal;
 
 public class Views extends BaseModel {
 
-    //One view to many movie
+    //Many views to one movie
     @ManyToOne(fetch = FetchType.LAZY)
     private Movie movie;
-
     @ManyToOne(fetch = FetchType.LAZY)
-    private Series series;
+    private Episode episode;
 
     //PER MINUTE
     private BigDecimal duration;

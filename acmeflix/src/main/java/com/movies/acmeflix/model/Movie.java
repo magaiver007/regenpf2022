@@ -20,10 +20,10 @@ import java.util.Set;
 public class Movie extends Content {
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "movie",cascade = CascadeType.ALL,orphanRemoval = true)
-    Set<Ratings> ratings = new HashSet<>();
+    private Set<Ratings> ratings = new HashSet<>();
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "movie",cascade = CascadeType.ALL,orphanRemoval = true)
-    Set<Views> views = new HashSet<>();
-    @ManyToMany(mappedBy = "movies", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<Views> views = new HashSet<>();
+    @ManyToMany(fetch = FetchType.LAZY,mappedBy = "movies", cascade = CascadeType.ALL)
     private Set<CrewMember> crewMember=new HashSet<>();
 
 }

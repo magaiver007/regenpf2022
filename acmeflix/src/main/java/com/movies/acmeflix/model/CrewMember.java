@@ -31,12 +31,16 @@ public class CrewMember extends BaseModel {
     @Max(100)
     private int age;
 
-    @ManyToMany
-    @JoinTable(name = "content_crew_members")
-    private Set<Series> series=new HashSet<>();
+    @ManyToMany(cascade={CascadeType.ALL})
+    @JoinTable(name = "series_crew",joinColumns = {
+            @JoinColumn(name = "crew_members_id")
+    },inverseJoinColumns={@JoinColumn(name = "episodes_id")})
+    private Set<Episode> episodes=new HashSet<>();
 
-    @ManyToMany
-    @JoinTable(name = "content_crew_members")
+    @ManyToMany(cascade={CascadeType.ALL})
+    @JoinTable(name = "movies_crew",joinColumns = {
+            @JoinColumn(name = "crew_members_id")
+    },inverseJoinColumns={@JoinColumn(name = "movies_id")})
     private Set<Movie> movies=new HashSet<>();
 
 }
