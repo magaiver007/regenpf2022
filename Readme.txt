@@ -45,17 +45,19 @@ Progress: Loading…
 Created ClassDiag_ver0.1 by Nikos B.
 2nd commit:
 upload project files by Stefanos O.
-3nd commit:
+3rd commit:
 First model attempt by Stefanos O.
 4th commit:
 minor model changes by Stefanos O.
 5th commit:
-refactored moviemodel package
+refactored movie model package
 implemented initial versions of Content, Movie, Episode classes by Dimosthenis K.
 6th commit:
 First repository attempt by Zoi K.
 7th commit:
-upload import.sql for dummies sql examples, queries.txt in order to insert queries that helps us with the project.
+upload import.sql for dummies sql examples, queries.txt in order to insert queries that helps us with the project by Stefanos O.
 8th commit:
-added episodes and seasons,updated queries and import.sql
+added episodes and seasons,updated queries and import.sql by Stefanos O.
+9th commit:
+Repo and Services update by Stefanos O.
 

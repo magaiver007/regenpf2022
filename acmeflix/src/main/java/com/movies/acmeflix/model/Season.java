@@ -3,6 +3,7 @@ import com.movies.acmeflix.base.BaseModel;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,7 +20,7 @@ import java.util.Set;
 public class Season extends BaseModel {
     @ManyToOne(fetch = FetchType.LAZY)
     private Series series;
-
+    @Min(1)
     private int seasonNumber;
     @OneToMany (fetch=FetchType.LAZY,mappedBy = "season",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<Episode> episodes =  new HashSet<>();
