@@ -16,7 +16,7 @@ public class AccountServiceImpl extends BaseServiceImpl<Account> implements Acco
     private final AccountRepository accountRepository;
 
     @Override
-    public JpaRepository<Account,Long> getRepository(){
+    JpaRepository<Account,Long> getRepository(){
 
         return accountRepository;
     }
