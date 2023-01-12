@@ -1,4 +1,4 @@
-package com.movies.acmeflix.services;
+package com.movies.acmeflix.service;
 
 import com.movies.acmeflix.model.Series;
 import com.movies.acmeflix.repository.SeriesRepository;

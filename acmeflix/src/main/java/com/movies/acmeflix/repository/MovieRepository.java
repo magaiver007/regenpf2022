@@ -7,6 +7,9 @@ import java.util.List;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 
+    Movie findAllByTitle(String title);
+
+
     //findTop10ByTotalViews(int totalViews);
 
     //List<Movie> findTop10ByAvgRating(double avgRating);

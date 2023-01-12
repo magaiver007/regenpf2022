@@ -1,4 +1,4 @@
-package com.movies.acmeflix.services;
+package com.movies.acmeflix.service;
 
 import com.movies.acmeflix.base.BaseModel;
 import org.springframework.data.jpa.repository.JpaRepository;

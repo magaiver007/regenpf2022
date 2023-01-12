@@ -1,4 +1,4 @@
-package com.movies.acmeflix.services;
+package com.movies.acmeflix.service;
 
 import java.util.List;
 

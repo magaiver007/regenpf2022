@@ -60,4 +60,6 @@ upload import.sql for dummies sql examples, queries.txt in order to insert queri
 added episodes and seasons,updated queries and import.sql by Stefanos O.
 9th commit:
 Repo and Services update by Stefanos O.
+10th commit:
+added controllers by Stefanos O.
 
