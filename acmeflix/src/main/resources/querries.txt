@@ -79,6 +79,21 @@ LIMIT 10;
 
 
 
+--------------------------------------------------------ERWTHMA 3-------------------------------------------------------
+-------------------------------------------The 5 most popular content categories----------------------------------------
+// Popular = most viewed
+
+SELECT COUNT(VIEWS.EPISODE_ID) AS MOST_VIEWED, SERIES.CATEGORY AS CATEGORY
+FROM VIEWS,EPISODES,SEASONS,SERIES
+WHERE EPISODE_ID=EPISODES.ID AND SEASONS.ID=SEASON_ID AND SERIES.ID=SERIES_ID
+UNION
+SELECT COUNT(VIEWS.MOVIE_ID) AS MOST_VIEWED, CATEGORY
+FROM MOVIES,VIEWS
+WHERE MOVIES.ID = VIEWS.MOVIE_ID
+GROUP BY CATEGORY
+ORDER BY MOST_VIEWED DESC
+LIMIT 5;
+
 
 
 
