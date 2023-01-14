@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -22,5 +23,15 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     @Override
     public Movie findAllByTitle(String title) {
         return Optional.ofNullable(movieRepository.findAllByTitle(title)).orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public List<Movie> findTop10ByTotalViews() {
+        return Optional.ofNullable(movieRepository.findTop10ByTotalViews()).orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public List<Movie> findTop10ByAvgRate() {
+        return Optional.ofNullable(movieRepository.findTop10ByAvgRate()).orElseThrow(NoSuchElementException::new);
     }
 }

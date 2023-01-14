@@ -151,7 +151,7 @@ insert into VIEWS  (ID, DURATION,MOVIE_ID,PROFILE_ID) values (22, 195, 5,22);
 insert into VIEWS  (ID, DURATION,MOVIE_ID,PROFILE_ID) values (23, 188, 5,11);
 insert into VIEWS  (ID, DURATION,MOVIE_ID,PROFILE_ID) values (24, 192, 5,21);
 insert into VIEWS  (ID, DURATION,MOVIE_ID,PROFILE_ID) values (25, 193, 5,3);
-insert into VIEWS  (ID, DURATION,MOVIE_ID,PROFILE_ID) values (26, 175, 1,2);
+insert into VIEWS  (ID, DURATION,MOVIE_ID,PROFILE_ID) values (41, 175, 1,2);
 
 insert into VIEWS  (ID, DURATION,EPISODE_ID,PROFILE_ID) values (26, 58, 1,1);
 insert into VIEWS  (ID, DURATION,EPISODE_ID,PROFILE_ID) values (27, 58, 1,11);
