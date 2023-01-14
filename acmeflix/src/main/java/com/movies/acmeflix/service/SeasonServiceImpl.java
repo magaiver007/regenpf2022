@@ -21,8 +21,8 @@ public class SeasonServiceImpl extends BaseServiceImpl<Season> implements Season
         return seasonRepository;
     }
 
-    @Override
-    public List<Season> findAllBySeries(Series series) {
-        return Optional.ofNullable(seasonRepository.findAllBySeries(series)).orElseThrow(NoSuchElementException::new);
-    }
+//    @Override
+//    public List<Season> findAllBySeries(Series series) {
+//        return Optional.ofNullable(seasonRepository.findAllBySeries(series)).orElseThrow(NoSuchElementException::new);
+//    }
 }

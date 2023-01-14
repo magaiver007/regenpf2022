@@ -6,6 +6,6 @@ import com.movies.acmeflix.model.Series;
 import java.util.List;
 
 public interface SeasonService extends BaseService<Season,Long> {
-    List<Season> findAllBySeries(Series series);
+//    List<Season> findAllBySeries(Series series);
 
 }

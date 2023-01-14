@@ -1,6 +1,6 @@
 package com.movies.acmeflix.model;
 
-import com.movies.acmeflix.base.BaseModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.movies.acmeflix.model.enumeration.PaymentMethod;
 import com.movies.acmeflix.model.enumeration.SubscriptionPlan;
 import lombok.Data;
@@ -38,6 +38,8 @@ public class Account extends BaseModel {
     @Enumerated(EnumType.STRING)
     @Column(length = 12, nullable = false)
     private PaymentMethod paymentMethod;
+
+    @JsonIgnore
     @OneToMany (fetch=FetchType.LAZY,mappedBy = "account",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<Profile> profiles =  new HashSet<>();
 }

@@ -1,6 +1,6 @@
 package com.movies.acmeflix.service;
 
-import com.movies.acmeflix.base.BaseModel;
+import com.movies.acmeflix.model.BaseModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;

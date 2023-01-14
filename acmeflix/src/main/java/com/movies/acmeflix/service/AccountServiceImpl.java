@@ -15,14 +15,11 @@ import java.util.Optional;
 
 public class AccountServiceImpl extends BaseServiceImpl<Account> implements AccountService {
     private final AccountRepository accountRepository;
-
     @Override
     JpaRepository<Account,Long> getRepository(){
 
         return accountRepository;
     }
-
-
     @Override
     public Account findByEmail(final String email){
         return Optional.ofNullable(accountRepository.findByEmail(email)).orElseThrow(NoSuchElementException::new);

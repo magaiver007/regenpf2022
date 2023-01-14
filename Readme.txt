@@ -62,4 +62,8 @@ added episodes and seasons,updated queries and import.sql by Stefanos O.
 Repo and Services update by Stefanos O.
 10th commit:
 added controllers by Stefanos O.
+11th commit:
+added mapstruct dependency by Dimosthenis k.
+12th comitt:
+added BaseController,resources,Mappers by Stefanos O.
 

@@ -1,29 +1,29 @@
 package com.movies.acmeflix.controller;
+import com.movies.acmeflix.mapper.AccountMapper;
+import com.movies.acmeflix.mapper.BaseMapper;
 import com.movies.acmeflix.model.Account;
+import com.movies.acmeflix.transfer.resources.AccountResource;
 import com.movies.acmeflix.service.AccountService;
+import com.movies.acmeflix.service.BaseService;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("accounts")
-public class AccountController {
-
+public class AccountController extends BaseController<Account, AccountResource> {
     private final AccountService accountService;
+    private final AccountMapper accountMapper;
 
-    @GetMapping
-    public List<Account> findAll(@RequestParam (required = false) String email){
-        if (email==null)
-            return accountService.findAll();
-        return List.of(accountService.findByEmail(email));
-    }
-    @GetMapping("/{id}")
-    public Account find(@PathVariable Long id){
-        return accountService.find(id);
+    @Override
+    protected BaseService<Account, Long> getBaseService() {
+        return accountService;
     }
 
+    @Override
+    protected BaseMapper<Account, AccountResource> getBaseMapper() {
+        return accountMapper;
+    }
 }
