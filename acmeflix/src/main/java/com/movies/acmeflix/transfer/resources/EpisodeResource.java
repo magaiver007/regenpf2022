@@ -9,7 +9,7 @@ import java.util.Set;
 @ToString(callSuper = true)
 
 public class EpisodeResource extends ContentResource {
-   // private SeasonResource season;
+   //private SeasonResource season;
 
 //    private Set<RatingsResource> ratings = new HashSet<>();
 //

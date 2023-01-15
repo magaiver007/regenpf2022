@@ -64,6 +64,8 @@ Repo and Services update by Stefanos O.
 added controllers by Stefanos O.
 11th commit:
 added mapstruct dependency by Dimosthenis k.
-12th comitt:
+12th commit:
 added BaseController,resources,Mappers by Stefanos O.
+13th commit:
+finally everything is working by Stefanos O.
 

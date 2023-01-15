@@ -14,5 +14,5 @@ public class SeasonResource extends BaseResource{
     private SeriesResource series;
     @Min(1)
     private int seasonNumber;
-    private Set<EpisodeResource> episodes =  new HashSet<>();
+    //private Set<EpisodeResource> episodes =  new HashSet<>();
 }
