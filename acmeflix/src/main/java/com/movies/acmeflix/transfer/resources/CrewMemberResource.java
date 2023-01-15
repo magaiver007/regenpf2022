@@ -10,7 +10,6 @@ import java.util.Set;
 @Data
 @ToString(callSuper = true)
 
-
 public class CrewMemberResource extends BaseResource {
     @NotNull(message = "Crew member's firstname cannot be null")
     private String firstname;
@@ -20,6 +19,6 @@ public class CrewMemberResource extends BaseResource {
     @Max(100)
     private int age;
 
-    private Set<EpisodeResource> episodes=new HashSet<>();
-    private Set<MovieResource> movies=new HashSet<>();
+     private Set<EpisodeResource> episodes =new HashSet<>();
+     private Set<MovieResource> movies=new HashSet<>();
 }

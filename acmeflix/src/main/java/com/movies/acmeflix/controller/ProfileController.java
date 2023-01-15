@@ -1,6 +1,5 @@
 package com.movies.acmeflix.controller;
 
-
 import com.movies.acmeflix.mapper.BaseMapper;
 import com.movies.acmeflix.mapper.ProfileMapper;
 import com.movies.acmeflix.model.Profile;
@@ -19,12 +18,12 @@ public class ProfileController extends BaseController<Profile, ProfileResource> 
     private final ProfileMapper profileMapper;
 
     @Override
-    BaseService<Profile, Long> getBaseService() {
+    protected   BaseService<Profile, Long> getBaseService() {
         return profileService;
     }
 
     @Override
-    BaseMapper<Profile, ProfileResource> getBaseMapper() {
+    protected   BaseMapper<Profile, ProfileResource> getBaseMapper() {
         return profileMapper;
     }
 

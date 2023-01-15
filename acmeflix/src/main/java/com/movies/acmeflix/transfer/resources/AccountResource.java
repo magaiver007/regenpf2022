@@ -1,17 +1,16 @@
 package com.movies.acmeflix.transfer.resources;
 
-
 import com.movies.acmeflix.model.enumeration.PaymentMethod;
 import com.movies.acmeflix.model.enumeration.SubscriptionPlan;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
+
 import javax.validation.constraints.NotNull;
-import java.util.HashSet;
-import java.util.Set;
+
 
 
 @Data
 @ToString(callSuper = true)
+
 
 public class AccountResource extends BaseResource {
     @NotNull(message = "Account's email can't be null")
@@ -22,7 +21,7 @@ public class AccountResource extends BaseResource {
     private SubscriptionPlan subscriptionPlan;
     @NotNull(message = "Account's Payment Method can't be null")
     private PaymentMethod paymentMethod;
-    private Set<ProfileResource> profileResource = new HashSet<>();
-    //private ProfileResource profileResource;
+//    private Set<ProfileResource> profiles = new HashSet<>();
+//    private ProfileResource profileResource;
 
 }

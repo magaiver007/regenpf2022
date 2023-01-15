@@ -1,12 +1,12 @@
 package com.movies.acmeflix.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.movies.acmeflix.model.enumeration.PaymentMethod;
 import com.movies.acmeflix.model.enumeration.SubscriptionPlan;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
@@ -15,13 +15,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
-@SuperBuilder
 @NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "ACCOUNTS", indexes = {@Index(columnList = "email")})
+@Table(name = "ACCOUNTS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "ACCOUNT_SEQ", initialValue = 1, allocationSize = 1)
+
 
 public class Account extends BaseModel {
     @NotNull(message = "Account's email can't be null")
@@ -38,8 +40,8 @@ public class Account extends BaseModel {
     @Enumerated(EnumType.STRING)
     @Column(length = 12, nullable = false)
     private PaymentMethod paymentMethod;
-
-    @JsonIgnore
-    @OneToMany (fetch=FetchType.LAZY,mappedBy = "account",cascade = CascadeType.ALL,orphanRemoval = true)
-    private Set<Profile> profiles =  new HashSet<>();
+//    @ToString.Exclude
+//    @EqualsAndHashCode.Exclude
+//    @OneToMany (fetch=FetchType.LAZY,mappedBy = "account",cascade = CascadeType.ALL,orphanRemoval = true)
+//    private Set<Profile> profiles =  new HashSet<>();
 }

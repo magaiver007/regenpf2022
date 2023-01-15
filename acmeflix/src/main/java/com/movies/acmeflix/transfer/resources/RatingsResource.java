@@ -8,7 +8,6 @@ import javax.validation.constraints.Min;
 
 @Data
 @ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
 public class RatingsResource extends BaseResource {
 
     //Many ratings to one movie.

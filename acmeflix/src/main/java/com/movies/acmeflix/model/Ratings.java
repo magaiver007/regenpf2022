@@ -9,9 +9,9 @@ import javax.validation.constraints.Min;
 
 
 @Data
-@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 
@@ -21,17 +21,17 @@ import javax.validation.constraints.Min;
 public class Ratings extends BaseModel {
 
     //Many ratings to one movie.
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Movie movie;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Episode episode;
 
     @Min(1)
     @Max(10)
     private int rating;
 
-    @ManyToOne (fetch = FetchType.LAZY,optional = false)
+    @ManyToOne
     private Profile profile;
 
 }

@@ -8,13 +8,13 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
-
 @Data
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+
 @Entity
 @Table(name="CREW_MEMBERS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "CREW_MEMBERS_SEQ", initialValue = 1, allocationSize = 1)
@@ -29,14 +29,16 @@ public class CrewMember extends BaseModel {
     @Min(10)
     @Max(100)
     private int age;
-
-    @ManyToMany(cascade={CascadeType.ALL})
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @ManyToMany(fetch = FetchType.EAGER,cascade={CascadeType.ALL})
     @JoinTable(name = "series_crew",joinColumns = {
             @JoinColumn(name = "crew_members_id")
     },inverseJoinColumns={@JoinColumn(name = "episodes_id")})
     private Set<Episode> episodes=new HashSet<>();
-
-    @ManyToMany(cascade={CascadeType.ALL})
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @ManyToMany(fetch = FetchType.EAGER,cascade={CascadeType.ALL})
     @JoinTable(name = "movies_crew",joinColumns = {
             @JoinColumn(name = "crew_members_id")
     },inverseJoinColumns={@JoinColumn(name = "movies_id")})

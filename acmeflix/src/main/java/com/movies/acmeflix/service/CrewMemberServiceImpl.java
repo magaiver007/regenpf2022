@@ -19,8 +19,5 @@ public class CrewMemberServiceImpl extends BaseServiceImpl<CrewMember> implement
         return crewMemberRepository;
     }
 
-    @Override
-    public List<CrewMember> findAllByMoviesAndEpisodes(Movie movie, Episode episode) {
-        return crewMemberRepository.findAllByMoviesAndEpisodes(movie,episode);
-    }
+
 }

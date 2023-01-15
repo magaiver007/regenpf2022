@@ -7,6 +7,6 @@ import com.movies.acmeflix.model.Movie;
 import java.util.List;
 
 public interface CrewMemberService extends BaseService<CrewMember,Long> {
-    List<CrewMember> findAllByMoviesAndEpisodes(Movie movie, Episode episode);
+
 
 }
