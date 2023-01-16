@@ -59,10 +59,6 @@ public class BackgroundTasksConfig {
 
             LOG.info("Doing backup....", LocalDate.now());
             writer.close();
-
-
-
-
         }
         catch (IOException e) {
             // TODO Auto-generated catch block
