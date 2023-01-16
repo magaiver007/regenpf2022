@@ -19,4 +19,8 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     @Query(value="SELECT AVG(RATING) AS AVG_RATING, TITLE FROM RATINGS,MOVIES WHERE MOVIE_ID= MOVIES.ID\n" +
             "GROUP BY TITLE ORDER BY AVG_RATING DESC LIMIT 10;", nativeQuery = true)
     List<Movie>findTop10ByAvgRate();
+
+    @Query(value = "SELECT COUNT(VIEWS.MOVIE_ID) AS MOST_VIEWED, CATEGORY FROM MOVIES,VIEWS WHERE MOVIES.ID = VIEWS.MOVIE_ID\n" +
+            "GROUP BY CATEGORY ORDER BY MOST_VIEWED DESC LIMIT 5;", nativeQuery = true)
+    List<Movie>findTop5Popular();
 }

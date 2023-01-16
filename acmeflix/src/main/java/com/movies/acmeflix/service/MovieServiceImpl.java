@@ -34,4 +34,9 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     public List<Movie> findTop10ByAvgRate() {
         return Optional.ofNullable(movieRepository.findTop10ByAvgRate()).orElseThrow(NoSuchElementException::new);
     }
+
+    @Override
+    public List<Movie> findTop5Popular() {
+        return Optional.ofNullable(movieRepository.findTop5Popular()).orElseThrow(NoSuchElementException::new);
+    }
 }
