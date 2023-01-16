@@ -11,4 +11,6 @@ public interface MovieService extends BaseService<Movie,Long> {
 
     List<Movie>findTop10ByAvgRate();
 
+    List<Movie>findTop5Popular();
+
 }
