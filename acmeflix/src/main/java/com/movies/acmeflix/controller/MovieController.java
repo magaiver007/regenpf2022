@@ -7,8 +7,9 @@ import com.movies.acmeflix.service.MovieService;
 import com.movies.acmeflix.service.BaseService;
 import com.movies.acmeflix.transfer.resources.MovieResource;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -25,5 +26,21 @@ public class MovieController extends BaseController<Movie, MovieResource>{
     @Override
     protected BaseMapper<Movie, MovieResource> getBaseMapper() {
         return MovieMapper;
+    }
+
+    @GetMapping
+    public Movie findByTitle(@RequestParam("title") String title) {
+        return MovieService.findAllByTitle(title);
+    }
+
+    // TO DO Βγάζει σφάλμα οτι δεν ειναι σωστο το SQL Query
+    @GetMapping("/top10")
+    public List<Movie> findTop10ByTotalViews(){
+        return MovieService.findTop10ByTotalViews();
+    }
+
+    @GetMapping("/topAvg")
+    public List<Movie> findTop10ByAvgRate(){
+        return MovieService.findTop10ByAvgRate();
     }
 }

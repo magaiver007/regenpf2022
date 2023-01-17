@@ -12,8 +12,11 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     Movie findAllByTitle(String title);
 
-    @Query(value = "SELECT ROUND(SUM(VIEWS.DURATION)/60,2) AS HOURS_VIEWED, TITLE FROM MOVIES,VIEWS\n" +
-            "WHERE MOVIES.ID = VIEWS.MOVIE_ID GROUP BY TITLE ORDER BY HOURS_VIEWED DESC LIMIT 10", nativeQuery = true)
+    @Query(value = "SELECT ROUND(SUM(VIEWS.DURATION)/60,2) AS HOURS_VIEWED, TITLE FROM MOVIES,VIEWS " +
+            "WHERE MOVIES.ID = VIEWS.MOVIE_ID " +
+            "GROUP BY TITLE " +
+            "ORDER BY HOURS_VIEWED " +
+            "DESC LIMIT 10", nativeQuery = true)
     List<Movie>findTop10ByTotalViews();
 
     @Query(value="SELECT AVG(RATING) AS AVG_RATING, TITLE FROM RATINGS,MOVIES WHERE MOVIE_ID= MOVIES.ID\n" +
