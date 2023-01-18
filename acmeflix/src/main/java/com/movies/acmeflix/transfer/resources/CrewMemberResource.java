@@ -20,5 +20,5 @@ public class CrewMemberResource extends BaseResource {
     private int age;
 
      private Set<EpisodeResource> episodes =new HashSet<>();
-     private Set<MovieResource> movies=new HashSet<>();
+     //private Set<MovieResource> movies=new HashSet<>();
 }
