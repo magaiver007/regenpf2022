@@ -16,12 +16,12 @@ public abstract class BaseController<T extends BaseModel, R extends BaseResource
 
     abstract BaseService<T,Long> getBaseService();
     abstract BaseMapper<T,R> getBaseMapper();
-    /*@GetMapping
+    @GetMapping
     public ResponseEntity<ApiResponse<List<R>>> findAll() {
         List<R> resources = getBaseMapper().toResources(getBaseService().findAll());
 
         return ResponseEntity.ok(ApiResponse.<List<R>>builder().data(resources).build());
-    }*/
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<R>> find(@PathVariable Long id) {

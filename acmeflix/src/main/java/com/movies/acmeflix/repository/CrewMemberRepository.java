@@ -8,5 +8,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface CrewMemberRepository extends JpaRepository<CrewMember, Long> {
-    //List<CrewMember> findAllByMoviesAndEpisodes(Movie movie, Episode episode);
 }

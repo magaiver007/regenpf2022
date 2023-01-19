@@ -18,7 +18,4 @@ public class CrewMemberResource extends BaseResource {
     @Min(10)
     @Max(100)
     private int age;
-
-     private Set<EpisodeResource> episodes =new HashSet<>();
-     //private Set<MovieResource> movies=new HashSet<>();
 }

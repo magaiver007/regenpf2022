@@ -10,8 +10,6 @@ import javax.validation.constraints.Min;
 @ToString(callSuper = true)
 public class RatingsResource extends BaseResource {
 
-    //Many ratings to one movie.
-
     private MovieResource movie;
 
     private EpisodeResource episode;

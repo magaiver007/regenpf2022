@@ -29,7 +29,7 @@ public class EpisodeController extends BaseController<Episode, EpisodeResource>{
       return EpisodeMapper;
    }
 
-   @GetMapping
+   @GetMapping(params = "title")
    public Episode findByTitle(@RequestParam("title") String title) {
       return EpisodeService.findAllByTitle(title);
    }

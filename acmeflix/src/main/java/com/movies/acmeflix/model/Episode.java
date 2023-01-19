@@ -18,15 +18,6 @@ import java.util.Set;
 public class Episode extends Content{
     @ManyToOne
     private Season season;
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    @OneToMany(fetch = FetchType.EAGER,mappedBy = "episode",cascade = CascadeType.ALL,orphanRemoval = true)
-//    private Set<Ratings> ratings = new HashSet<>();
-
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    @OneToMany(fetch = FetchType.EAGER,mappedBy = "episode",cascade = CascadeType.ALL,orphanRemoval = true)
-//    private Set <Views> views = new HashSet<>();
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @ManyToMany(fetch = FetchType.EAGER,mappedBy = "episodes", cascade = {CascadeType.ALL})

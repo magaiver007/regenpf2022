@@ -20,9 +20,4 @@ public class SeasonServiceImpl extends BaseServiceImpl<Season> implements Season
     JpaRepository<Season, Long> getRepository() {
         return seasonRepository;
     }
-
-//    @Override
-//    public List<Season> findAllBySeries(Series series) {
-//        return Optional.ofNullable(seasonRepository.findAllBySeries(series)).orElseThrow(NoSuchElementException::new);
-//    }
 }

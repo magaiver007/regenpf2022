@@ -16,14 +16,6 @@ import java.util.Set;
 @Table(name="MOVIES")
 @SequenceGenerator(name = "idGenerator", sequenceName = "MOVIE_SEQ", initialValue = 1, allocationSize = 1)
 public class Movie extends Content {
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    @OneToMany(fetch = FetchType.EAGER,mappedBy = "movie",cascade = CascadeType.ALL,orphanRemoval = true)
-//    private Set<Ratings> ratings = new HashSet<>();
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    @OneToMany(fetch = FetchType.EAGER,mappedBy = "movie",cascade = CascadeType.ALL,orphanRemoval = true)
-//    private Set<Views> views = new HashSet<>();
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @ManyToMany(fetch = FetchType.EAGER,mappedBy = "movies", cascade = {CascadeType.ALL})

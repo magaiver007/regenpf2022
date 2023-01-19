@@ -21,7 +21,4 @@ public class AccountResource extends BaseResource {
     private SubscriptionPlan subscriptionPlan;
     @NotNull(message = "Account's Payment Method can't be null")
     private PaymentMethod paymentMethod;
-//    private Set<ProfileResource> profiles = new HashSet<>();
-//    private ProfileResource profileResource;
-
 }

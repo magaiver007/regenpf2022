@@ -20,8 +20,4 @@ public class Season extends BaseModel {
     private Series series;
     @Min(1)
     private int seasonNumber;
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    @OneToMany (fetch=FetchType.EAGER,mappedBy = "season",cascade = CascadeType.ALL,orphanRemoval = true)
-//    private Set<Episode> episodes =  new HashSet<>();
 }

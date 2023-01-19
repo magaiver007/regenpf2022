@@ -8,8 +8,6 @@ import lombok.*;
 
 public class SeriesResource extends ContentResource {
 
-    //Could be year or --(still continues)
-    private String yearOfEnding;
-    //private Set<SeasonResource> season = new HashSet<>();
+     private String yearOfEnding;
 
 }

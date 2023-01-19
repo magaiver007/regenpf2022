@@ -21,14 +21,11 @@ public class GlobalExceptionHandler  {
 
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<?> handleException(final Exception ex, final WebRequest webRequest) {
-       // logger.error("An unexpected exception was thrown.", ex);
-
         return new ResponseEntity<>(ApiResponse.builder().apiError(getApiError(ex, HttpStatus.INTERNAL_SERVER_ERROR, webRequest, null)).build(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public final ResponseEntity<ApiResponse<?>> handleValidationException(final Exception ex, final WebRequest webRequest) {
-        //logger.error("A field is not valid.", ex);
 
         return new ResponseEntity<>(ApiResponse.builder().apiError(getApiError(ex, HttpStatus.BAD_REQUEST, webRequest, null)).build(), HttpStatus.BAD_REQUEST);
     }
@@ -36,7 +33,6 @@ public class GlobalExceptionHandler  {
     @ExceptionHandler(DataAccessException.class)
     public final ResponseEntity<ApiResponse<?>> handleDataErrors(final DataAccessException ex,
                                                                  final WebRequest request) {
-        //logger.error("There was something wrong while interacting with the associated database.", ex);
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.NOT_ACCEPTABLE, request, null)).build(),
                 HttpStatus.NOT_ACCEPTABLE);
@@ -47,7 +43,6 @@ public class GlobalExceptionHandler  {
                                                                            final WebRequest request) {
         var customMessage = "There was a conflict while interacting with the associated database. Make sure the " +
                 "data submitted does not include already existing values in fields such as ids and serial numbers.";
-        //logger.error("{}", customMessage, ex);
 
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.NOT_ACCEPTABLE, request, customMessage))
@@ -57,7 +52,6 @@ public class GlobalExceptionHandler  {
     @ExceptionHandler(MissingServletRequestParameterException.class)
     protected ResponseEntity<ApiResponse<?>> handleMissingServletRequestParameter(
             final MissingServletRequestParameterException ex, final WebRequest request) {
-        //logger.error("There was a parameter missing from incoming request", ex);
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.BAD_REQUEST, request, null)).build(),
                 HttpStatus.BAD_REQUEST);
@@ -66,7 +60,6 @@ public class GlobalExceptionHandler  {
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<ApiResponse<?>> handleMethodArgumentTypeMismatch(final MethodArgumentTypeMismatchException ex,
                                                                            final WebRequest request) {
-        //logger.error("Method argument, although matched, is of wrong type.", ex);
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.BAD_REQUEST, request, null)).build(),
                 HttpStatus.BAD_REQUEST);

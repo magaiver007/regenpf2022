@@ -40,8 +40,4 @@ public class Account extends BaseModel {
     @Enumerated(EnumType.STRING)
     @Column(length = 12, nullable = false)
     private PaymentMethod paymentMethod;
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    @OneToMany (fetch=FetchType.LAZY,mappedBy = "account",cascade = CascadeType.ALL,orphanRemoval = true)
-//    private Set<Profile> profiles =  new HashSet<>();
 }

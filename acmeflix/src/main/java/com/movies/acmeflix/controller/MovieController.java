@@ -29,7 +29,7 @@ public class MovieController extends BaseController<Movie, MovieResource>{
         return MovieMapper;
     }
 
-    @GetMapping
+    @GetMapping(params = "title")
     public Movie findByTitle(@RequestParam("title") String title) {
         return MovieService.findAllByTitle(title);
     }

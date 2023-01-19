@@ -49,9 +49,7 @@ public class BackgroundTasksConfig {
                     }
                     writer.writeNext(data);
                 }
-
             }
-
             LOG.info("Doing backup at ({})", LocalDateTime.now());
             writer.close();
         }
@@ -61,11 +59,5 @@ public class BackgroundTasksConfig {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
-
-
-
-
-    //@Autowired
 }
