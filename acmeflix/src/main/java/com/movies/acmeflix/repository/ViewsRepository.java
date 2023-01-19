@@ -4,9 +4,7 @@ import com.movies.acmeflix.model.Movie;
 import com.movies.acmeflix.model.Views;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import reportsss.Top10ByAvgRating;
-import reportsss.Top10ContentByViews;
-import reportsss.Top5Categories;
+import reportsss.*;
 
 import java.util.List;
 
@@ -47,4 +45,20 @@ public interface ViewsRepository extends JpaRepository<Views, Long> {
             "ORDER BY MOST_VIEWED DESC\n" +
             "LIMIT 5;", nativeQuery = true)
     List<Top5Categories>findTop5Categories();
+
+    @Query(value = "SELECT ROUND(SUM(DURATION)/60,2)AS VIEWING_HOURS, ACCOUNTS.ID AS ACCOUNT,ACCOUNTS.EMAIL AS EMAIL,PROFILES.ID AS PROFILE,USERNAME\n" +
+            "FROM VIEWS,PROFILES,ACCOUNTS\n" +
+            "WHERE PROFILE_ID=PROFILES.ID AND ACCOUNT_ID=ACCOUNTS.ID AND ACCOUNTS.ID=1\n" +
+            "GROUP BY PROFILES.ID;",nativeQuery = true)
+    List<HoursPerProfile>findViewsByProfile();
+
+    @Query(value = "SELECT ACCOUNTS.ID,ACCOUNTS.EMAIL, PROFILES.USERNAME,MOVIES.TITLE AS TITLE\n" +
+            "FROM VIEWS,PROFILES,ACCOUNTS,MOVIES\n" +
+            "WHERE PROFILE_ID=PROFILES.ID AND ACCOUNT_ID=ACCOUNTS.ID AND MOVIES.ID = MOVIE_ID\n" +
+            "UNION\n" +
+            "SELECT ACCOUNTS.ID,ACCOUNTS.EMAIL, PROFILES.USERNAME,EPISODES.TITLE AS TITLE\n" +
+            "FROM VIEWS,PROFILES,ACCOUNTS,EPISODES\n" +
+            "WHERE PROFILE_ID=PROFILES.ID AND ACCOUNT_ID=ACCOUNTS.ID AND EPISODES.ID = EPISODE_ID\n" +
+            "GROUP BY ACCOUNTS.ID,PROFILES.USERNAME,TITLE;",nativeQuery = true)
+    List<ViewingHistoryPerProfile> findViewsByProfileAndMovie();
 }

@@ -11,9 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import reportsss.Top10ByAvgRating;
-import reportsss.Top10ContentByViews;
-import reportsss.Top5Categories;
+import reportsss.*;
 
 import java.util.List;
 
@@ -42,4 +40,10 @@ public class ViewsController extends BaseController<Views, ViewsResource> {
 
     @GetMapping("/top5Categories")
     public List<Top5Categories> findTop5Categories(){return viewsService.findTop5Categories();}
+    @GetMapping("/hoursPerProfile")
+    public List<HoursPerProfile> hoursPerProfiles(){return viewsService.findViewsByProfile();}
+    @GetMapping("/viewingHistory")
+    public List<ViewingHistoryPerProfile> viewingHistoryPerProfiles(){
+        return viewsService.findViewsByProfileAndMovie();
+    }
 }

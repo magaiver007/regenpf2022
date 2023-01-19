@@ -6,9 +6,7 @@ import com.movies.acmeflix.repository.ViewsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
-import reportsss.Top10ByAvgRating;
-import reportsss.Top10ContentByViews;
-import reportsss.Top5Categories;
+import reportsss.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -40,4 +38,13 @@ public class ViewsServiceImpl extends BaseServiceImpl<Views> implements ViewsSer
         return Optional.ofNullable(viewsRepository.findTop5Categories()).orElseThrow(NoSuchElementException::new);
     }
 
+    @Override
+    public List<HoursPerProfile> findViewsByProfile() {
+        return Optional.ofNullable(viewsRepository.findViewsByProfile()).orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public List<ViewingHistoryPerProfile> findViewsByProfileAndMovie() {
+        return Optional.ofNullable(viewsRepository.findViewsByProfileAndMovie()).orElseThrow(NoSuchElementException::new);
+    }
 }
